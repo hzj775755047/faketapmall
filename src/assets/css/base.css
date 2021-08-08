@@ -31,6 +31,8 @@
   --hot-label-font-size: 12px;
   --hot-label-line-height: 18px;
   --hot-label-bg-color: #f5f7f8;
+  --nonactive-color: #868c92;
+  --active-color: #1296db;
 }
 *,
 *::before,

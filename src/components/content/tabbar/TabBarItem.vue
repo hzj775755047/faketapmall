@@ -31,7 +31,7 @@ export default {
     isActive(){
       // this.$route指处于活跃的路由的对象
       // a.indexOf(b): 在a中找b，若找到则返回b开头的位置，没有找到则返回-1
-      return this.$route.path === this.path;
+      return this.$route.path.indexOf(this.path) !== -1;
     },
     activeStyle(){
       return this.isActive ? {color: this.activeColor}: {};
@@ -50,11 +50,10 @@ export default {
 
 <style scoped>
   .tab-bar-item{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 10px 10px 30px;
     margin-top: 40px;
+    margin-right: 40px;
     margin-left: 20px;
-    padding-left: 30px;
     border-radius: 38px;
     transition: background-color .2s;
   }

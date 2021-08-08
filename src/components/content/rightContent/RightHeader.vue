@@ -19,11 +19,14 @@
 
 <style scoped>
   #right-header{
-    padding: 12px 14px 12px 0;
+    padding: 12px 14px 25px 0;
     line-height: 24px;
     display: flex;
     align-items: center;
     width: auto;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
   }
   .search{
     width: 100%;

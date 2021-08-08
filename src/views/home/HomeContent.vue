@@ -1,6 +1,6 @@
 <template>
   <div id="home-content">
-    <application-content title="推荐"></application-content>
+    <application-content :titles="titles"></application-content>
     <right-content></right-content>
   </div>
 </template>
@@ -11,7 +11,12 @@
   export default {
     name: "HomeContent",
     components: {
-      ApplicationContent, RightContent
+      ApplicationContent, RightContent,
+    },
+    data(){
+      return {
+        titles: ['推荐']
+      }
     }
   }
 </script>

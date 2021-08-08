@@ -1,41 +1,42 @@
 <template>
   <div id="applicationContent">
     <div class="middleHeader">
-      <div class="header-content">{{ this.title }}</div>
-      <application/>
+      <!--上边标题栏-->
+      <content-top-bar :titles="titles"></content-top-bar>
+      <!--下边显示内容-->
+      <application title="91"></application>
+      <application title="22"></application>
+      <application title="33"></application>
+      <application title="33"></application>
+      <application title="33"></application>
+      <application title="33"></application>
     </div>
   </div>
 </template>
 
 <script>
   import Application from "@/components/content/middleContent/Application";
+  import ContentTopBar from "@/components/content/tabbar/ContentTopBar";
   export default {
     name: "ApplicationContent",
     components:{
-      Application
+      Application, ContentTopBar
     },
     props: {
-      title: String,
+      titles: Array,
     }
   }
 </script>
 
 <style scoped>
   #applicationContent{
-    width: 67%;
+    width: 600px;
     margin-left: 10px;
     top: 0;
     bottom: 0;
   }
   .header-content{
-    width: fit-content;
-    display: flex;
-    flex: 1;
-    margin-top: 30px;
-    margin-left: 30px;
-    font-size: 22px;
-    line-height: 26px;
-    font-weight: 700;
-    cursor: pointer;
+
   }
+
 </style>

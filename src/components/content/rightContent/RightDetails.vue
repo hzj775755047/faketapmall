@@ -29,7 +29,6 @@
 
 <style scoped>
   #RightDetails{
-    margin-top: 10px;
     margin-right: 15px;
   }
   .right-detail-header{

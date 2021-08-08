@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="recommendation-content">
-        <div class="recommendation-title">墨斗</div>
+        <div class="recommendation-title">{{this.title}}</div>
         <div class="recommendation-description">西游题材横板格斗，超酷连招3分钟KO对手</div>
       </div>
     </div>
@@ -18,15 +18,18 @@
 </template>
 
 <script>
-export default {
-name: "Application"
-}
+  export default {
+    name: "Application",
+    props:{
+      title: String,
+    }
+  }
 </script>
 
 <style scoped>
   .application{
     cursor: pointer;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     border-radius: var(--primary-border-radius);
     background-color: var(--application-bg-color);
     box-shadow: 0px 7px 10px 5px rgba(134,140,146,.3);

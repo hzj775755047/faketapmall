@@ -1,14 +1,17 @@
 <template>
   <div id="rightContent">
     <right-header></right-header>
-    <right-details name="热门游戏"></right-details>
-    <right-details name="热门搜索"></right-details>
+    <div class="right-details-content">
+      <right-details name="热门应用"></right-details>
+      <right-details name="热门搜索"></right-details>
+    </div>
+
   </div>
 </template>
 
 <script>
-  import RightHeader from "@/components/content/rightContent/RightHeader";
   import RightDetails from "@/components/content/rightContent/RightDetails";
+  import RightHeader from "@/components/content/rightContent/RightHeader";
   export default {
     name: "RightContent",
     components: {
@@ -20,4 +23,7 @@
 <style scoped>
   #rightContent{
   }
+  .right-details-content{
+  }
+
 </style>
