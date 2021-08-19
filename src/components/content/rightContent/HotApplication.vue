@@ -1,14 +1,12 @@
 <template>
   <div id="hot-application">
     <div class="hot-application-left">
-      <img class="hot-application-img" src="~assets/img/index/hotImg.png" alt="">
+      <img class="hot-application-img" :src="data.app_icon" alt="">
     </div>
     <div class="hot-application-middle">
-      <div class="hot-title">{{ this.name }}</div>
+      <div class="hot-title">{{ data.app_name }}</div>
       <div class="hot-label">
-        <hot-application-label name="格斗"></hot-application-label>
-        <hot-application-label name="益智"></hot-application-label>
-        <hot-application-label name="脑残"></hot-application-label>
+        <hot-application-label :name="data.app_class_name"></hot-application-label>
       </div>
     </div>
     <div class="hot-application-right">
@@ -26,10 +24,7 @@
       HotApplicationLabel
     },
     props: {
-      name: {
-        type: String,
-        default: "MineCraft"
-      }
+      data: Object
     }
   }
 </script>
@@ -41,9 +36,11 @@
     display: flex;
     margin: 10px 0;
   }
-  .hot-application-img{
+  .hot-application-left{
     width: 56px;
     height: 56px;
+  }
+  .hot-application-img{
   }
   .hot-application-middle{
     display: flex;
@@ -72,8 +69,8 @@
     font-weight: var(--font-weight);
   }
   .hot-application-right >img{
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
     margin-right: 3px;
   }
 </style>

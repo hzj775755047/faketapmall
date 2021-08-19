@@ -1,8 +1,8 @@
 <template>
   <tab-bar id="tab-bar">
-      <icon>
+      <div class="icon-i">
         <img src="~assets/img/taptap.png" alt="">
-      </icon>
+      </div>
       <tab-bar-item path="/home" activeColor="#1296db">
         <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
         <img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" alt="">
@@ -36,16 +36,14 @@
 
 <style scoped>
   #tab-bar{
+    width: 250px;
     position: sticky;
     top: 0;
     height: 100%;
-    margin-left: 20px;
+    margin-left: 5px;
   }
-  .icon{
-    padding-bottom: 10px;
-    margin-left: 30px;
-  }
-  .icon img{
-    width: 47%;
+  .icon-i{
+    width: 100px;
+    margin: 0 auto;
   }
 </style>

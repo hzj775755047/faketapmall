@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
+    white-space: nowrap;
     color: var(--hot-label-font-color);
     background-color: var(--hot-label-bg-color);
     line-height: var(--hot-label-line-height);

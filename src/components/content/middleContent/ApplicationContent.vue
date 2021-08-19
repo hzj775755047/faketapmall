@@ -4,12 +4,8 @@
       <!--上边标题栏-->
       <content-top-bar :titles="titles"></content-top-bar>
       <!--下边显示内容-->
-      <application title="91"></application>
-      <application title="22"></application>
-      <application title="33"></application>
-      <application title="33"></application>
-      <application title="33"></application>
-      <application title="33"></application>
+      <application v-for="d in data" :data="d"></application>
+
     </div>
   </div>
 </template>
@@ -24,6 +20,7 @@
     },
     props: {
       titles: Array,
+      data: Array
     }
   }
 </script>

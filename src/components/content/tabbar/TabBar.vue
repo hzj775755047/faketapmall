@@ -12,7 +12,7 @@ name: "TabBar"
 
 <style scoped>
   #tab-bar{
-    width: 20%;
+    width: auto;
     left: 0;
     display: flex;
     flex-direction: column;

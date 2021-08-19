@@ -6,14 +6,16 @@
 
 <script>
   import HomeContent from "@/views/home/HomeContent";
+
   export default {
     name: "Home",
     components: {
       HomeContent,
-    }
+    },
   }
 </script>
 
 <style scoped>
-
+  #home{
+  }
 </style>

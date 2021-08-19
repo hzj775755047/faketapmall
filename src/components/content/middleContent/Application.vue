@@ -1,17 +1,19 @@
 <template>
   <div class="application">
-    <img class="application-img" src="~assets/img/application/application.jpg" alt="">
+    <div class="app-i">
+      <img class="application-img" :src="data.app_big_img" alt="">
+    </div>
     <div class="recommendation">
       <div class="recommendation-header">
-        <div class="label">Tap 独家</div>
+        <div class="label">高软 独家</div>
         <div class="score">
           <img src="~assets/img/label/star.svg" alt="">
           <div class="score-number">8.2</div>
         </div>
       </div>
       <div class="recommendation-content">
-        <div class="recommendation-title">{{this.title}}</div>
-        <div class="recommendation-description">西游题材横板格斗，超酷连招3分钟KO对手</div>
+        <div class="recommendation-title">{{data.app_name}}</div>
+        <div class="recommendation-description">{{ data.description }}</div>
       </div>
     </div>
   </div>
@@ -21,7 +23,7 @@
   export default {
     name: "Application",
     props:{
-      title: String,
+      data: Object
     }
   }
 </script>
@@ -34,6 +36,7 @@
     background-color: var(--application-bg-color);
     box-shadow: 0px 7px 10px 5px rgba(134,140,146,.3);
   }
+
   .application-img{
     width: 100%;
     border-radius: 10px 10px 0 0;

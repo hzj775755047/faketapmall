@@ -50,16 +50,18 @@ export default {
 
 <style scoped>
   .tab-bar-item{
-    padding: 10px 10px 10px 30px;
-    margin-top: 40px;
-    margin-right: 40px;
-    margin-left: 20px;
+    padding: 10px 20px 10px 10px;
+    margin: 40px 50px 0 20px;
     border-radius: 38px;
     transition: background-color .2s;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
   }
   .tab-bar-item img{
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
   }
   .tab-bar-item div{
     display: inline;
@@ -68,7 +70,7 @@ export default {
   .tab-bar-item .itemText{
     font-size: 20px;
     font-weight: 700;
-    margin-left: 20px;
+    margin-left: 25px;
   }
   .active{
     background-color: white;

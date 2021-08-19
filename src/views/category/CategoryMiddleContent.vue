@@ -22,7 +22,7 @@
 
 <style scoped>
   #category-middle-content{
-    width: 600px;
+    width: 800px;
     margin-right: 10px;
   }
   .content{

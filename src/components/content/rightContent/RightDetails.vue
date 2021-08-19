@@ -4,9 +4,7 @@
       <div class="right-detail-header-title">{{ this.name}}</div>
     </div>
     <div class="right-detail-content">
-      <hot-application name="打飞机"></hot-application>
-      <hot-application name="飞机打我"></hot-application>
-      <hot-application name="91porn"></hot-application>
+      <hot-application v-for="l in list" :data="l"></hot-application>
     </div>
     <div class="right-detail-footer">
       <div class="right-detail-footer-title">查看全部</div>
@@ -23,6 +21,7 @@
     },
     props:{
       name: String,
+      list: Array
     }
   }
 </script>
@@ -30,6 +29,7 @@
 <style scoped>
   #RightDetails{
     margin-right: 15px;
+    margin-bottom: 20px;
   }
   .right-detail-header{
     width: 100%;
