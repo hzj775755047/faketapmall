@@ -1,24 +1,22 @@
 <template>
   <div id="category-application">
-    <div class="rank-num">{{rankNum}}</div>
+    <div class="rank-num">{{num+1}}</div>
     <div class="content">
       <div class="c-l-img">
-        <img src="~assets/img/application/categoryImg.png" alt="">
+        <img :src="data.app_icon" alt="">
       </div>
       <div class="c-mid">
-        <div class="c-title">索尼克在2020北京奥运会搞基</div>
+        <div class="c-title">{{ data.app_name }}</div>
         <div class="c-rank-score">
           <img class="c-star" src="~assets/img/label/star.svg" alt="">
           <div class="c-score">6.4</div>
         </div>
         <div class="c-label">
-          <div class="c-label-item">休闲</div>
-          <div class="c-label-item">体育</div>
-          <div class="c-label-item">搞基</div>
+          <div class="c-label-item">{{data.app_class_name}}</div>
         </div>
       </div>
       <div class="c-r-img">
-        <img src="~assets/img/application/c-2.jpg" alt="">
+        <img :src="data.app_big_img" alt="">
       </div>
     </div>
   </div>
@@ -28,11 +26,8 @@
   export default {
     name: "CategoryApplication",
     props: {
-      rankNum: {
-        type: Number,
-        default: 0,
-      },
-
+      data: Object,
+      num: Number
     }
   }
 </script>
@@ -69,7 +64,6 @@
   }
   .c-l-img{
     width: 96px;
-    height: 96px;
     margin-right: 15px;
   }
   .c-rank-score{
@@ -110,8 +104,7 @@
   }
   .c-r-img{
     object-fit: cover;
-    width: 170px;
-    height: 96px;
+    width: 150px;
     border-radius: 6px;
     overflow: hidden;
     opacity: 1;

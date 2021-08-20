@@ -6,7 +6,9 @@
     <div id="middle-content">
 <!--      <input type="file" @change="getFile($event)">-->
 <!--      <button class="" @click="submit($event)">提交</button>-->
-      <router-view></router-view>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>

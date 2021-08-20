@@ -1,6 +1,6 @@
 <template>
   <div id="category-bar-item" :class="{active:isActive, nonActive:!isActive}" @click="itemClick">
-    {{title}}
+    {{data.app_class_name}}
   </div>
 </template>
 
@@ -9,18 +9,18 @@
     name: "CategoryBarItem",
     computed:{
       isActive(){
-        return this.$route.path === this.path;
+        return this.$route.path === this.path+"/"+this.data.app_class_id;
       }
     },
     props: {
-      title: String,
       path: String,
+      data: Object
     },
     methods: {
       itemClick(){
         // 在按钮所对应的页面上，如果再次点击按钮，不跳转
         if(this.$route.path === this.path) return;
-        this.$router.replace(this.path);
+        this.$router.replace(this.path + "/" + this.data.app_class_id);
       }
     }
   }

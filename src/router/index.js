@@ -4,21 +4,7 @@ import VueRouter from 'vue-router'
 const Home = ()=> import('../views/home/Home')
 const Ranking = ()=> import('../views/ranking/Ranking')
 const Category = ()=> import('../views/category/Category')
-const ChuXingDaoHang = ()=> import('../views/category/categoryChildren/ChuXingDaoHang')
-const ErTong = ()=> import('../views/category/categoryChildren/ErTong')
-const GouWuBiJia = ()=> import('../views/category/categoryChildren/GouWuBiJia')
-const JinRongLiCai = ()=> import('../views/category/categoryChildren/JinRongLiCai')
-const LvXingZhuSu = ()=> import('../views/category/categoryChildren/LvXingZhuSu')
-const MeiShi = ()=> import('../views/category/categoryChildren/MeiShi')
-const PaiSheMeiHua = ()=> import('../views/category/categoryChildren/PaiSheMeiHua')
-const ShangWu = ()=> import('../views/category/categoryChildren/ShangWu')
-const SheJiaoTongXun = ()=> import('../views/category/categoryChildren/SheJiaoTongXun')
-const ShiYongGongJu = ()=> import('../views/category/categoryChildren/ShiYongGongJu')
-const XiaoChengXu = ()=> import('../views/category/categoryChildren/XiaoChengXu')
-const XinWenYueDu = ()=> import('../views/category/categoryChildren/XinWenYueDu')
-const YingYingYuLe = ()=> import('../views/category/categoryChildren/YingYingYule')
-const YunDongJianKang = ()=> import('../views/category/categoryChildren/YunDongJianKang')
-
+const Class = () => import('../views/category/categoryChildren/Class')
 // 1.安装插件
 Vue.use(VueRouter)
 
@@ -33,64 +19,68 @@ const routes = [
     component: Home,
   },
   {
+    path: "/category",
+    redirect: 'category/c1/1'
+  },
+  {
     path: '/category',
     component: Category,
     children: [
       {
-        path: '',
-        component: ChuXingDaoHang
+        path: 'c1/:id',
+        component: Class
       },
       {
-        path: 'ertong',
-        component: ErTong
+        path: 'c2/:id',
+        component: Class
       },
       {
-        path: 'gouwubijia',
-        component: GouWuBiJia
+        path: 'c3/:id',
+        component: Class
       },
       {
-        path: 'jinronglicai',
-        component: JinRongLiCai
+        path: 'c4/:id',
+        component: Class
       },
       {
-        path: 'lvxingzhusu',
-        component: LvXingZhuSu
+        path: 'c5/:id',
+        component: Class
       },
       {
-        path: 'meishi',
-        component: MeiShi
+        path: 'c6/:id',
+        component: Class
       },
       {
-        path: 'paishemeihua',
-        component: PaiSheMeiHua
+        path: 'c7/:id',
+        component: Class
       },
       {
-        path: 'shangwu',
-        component: ShangWu
+        path: 'c8/:id',
+        component: Class
       },
       {
-        path: 'shejiaotongxun',
-        component: SheJiaoTongXun
+        path: 'c9/:id',
+        component: Class
       },
       {
-        path: 'shiyonggongju',
-        component: ShiYongGongJu
+        path: 'c10/:id',
+        component: Class
       },
       {
-        path: 'xiaochengxu',
-        component: XiaoChengXu
+        path: 'c11/:id',
+        component: Class
       },
       {
-        path: 'xinwenyuedu',
-        component: XinWenYueDu
+        path: 'c12/:id',
+        component: Class
       },
       {
-        path: 'yingyingyule',
-        component: YingYingYuLe
+        path: 'c13/:id',
+        component: Class
       },
       {
-        path: 'yundongjiankang',
-        component: YunDongJianKang
+        path: 'c14/:id',
+        component: Class
       }
     ]
   },
@@ -101,6 +91,13 @@ const routes = [
 ]
 const router = new VueRouter({
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return {x: 0, y: 0}
+    }
+  },
   mode: 'history'
 })
 
