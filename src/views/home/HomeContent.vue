@@ -23,7 +23,7 @@
     created() {
       // 获取应用列表数据
       getHomeMultidata().then(res =>{
-        this.applicationList = res;
+        this.applicationList = res.data;
       })
     }
   }

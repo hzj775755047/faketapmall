@@ -25,7 +25,7 @@
     },
     created() {
       getRankingMultidata().then(res =>{
-        this.rankingList = res;
+        this.rankingList = res.data;
       })
     }
   }

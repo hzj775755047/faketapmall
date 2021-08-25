@@ -1,24 +1,29 @@
 <template>
   <tab-bar id="tab-bar">
-      <div class="icon-i">
-        <img src="~assets/img/taptap.png" alt="">
-      </div>
-      <tab-bar-item path="/home" activeColor="#1296db">
-        <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
-        <img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" alt="">
-        <div slot="item-text">首页</div>
-      </tab-bar-item>
-      <tab-bar-item path="/ranking" activeColor="#1296db">
-        <img slot="item-icon" src="~assets/img/tabbar/ranking.svg" alt="">
-        <img slot="item-icon-active" src="~assets/img/tabbar/ranking_active.svg" alt="">
-        <div slot="item-text">排行榜</div>
-      </tab-bar-item>
-      <tab-bar-item path="/category" activeColor="#1296db">
-        <img slot="item-icon" src="~assets/img/tabbar/category.svg" alt="">
-        <img slot="item-icon-active" src="~assets/img/tabbar/category_active.svg" alt="">
-        <div slot="item-text">分类</div>
-      </tab-bar-item>
-    </tab-bar>
+    <div @click="toHome" class="icon-i">
+      <img src="~assets/img/taptap.png" alt="">
+    </div>
+    <tab-bar-item path="/home" activeColor="#1296db">
+      <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
+      <img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" alt="">
+      <div slot="item-text">首页</div>
+    </tab-bar-item>
+    <tab-bar-item path="/ranking" activeColor="#1296db">
+      <img slot="item-icon" src="~assets/img/tabbar/ranking.svg" alt="">
+      <img slot="item-icon-active" src="~assets/img/tabbar/ranking_active.svg" alt="">
+      <div slot="item-text">排行榜</div>
+    </tab-bar-item>
+    <tab-bar-item path="/category" activeColor="#1296db">
+      <img slot="item-icon" src="~assets/img/tabbar/category.svg" alt="">
+      <img slot="item-icon-active" src="~assets/img/tabbar/category_active.svg" alt="">
+      <div slot="item-text">分类</div>
+    </tab-bar-item>
+    <tab-bar-item path="/upload" activeColor="#1296db">
+      <img slot="item-icon" src="~assets/img/tabbar/upload.svg" alt="">
+      <img slot="item-icon-active" src="~assets/img/tabbar/upload_active.svg" alt="">
+      <div slot="item-text">开发者</div>
+    </tab-bar-item>
+  </tab-bar>
 </template>
 
 <script>
@@ -30,6 +35,11 @@
     components: {
       TabBarItem,
       TabBar, Icon
+    },
+    methods: {
+      toHome(){
+        this.$router.replace('/home')
+      }
     }
   }
 </script>
@@ -45,5 +55,6 @@
   .icon-i{
     width: 100px;
     margin: 0 auto;
+    cursor: pointer;
   }
 </style>

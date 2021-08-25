@@ -6,14 +6,30 @@
       <input class="search-input" type="text" placeholder="搜索">
     </div>
     <!-- login图像   -->
-    <img class="login-img" src="~assets/img/index/login.png" alt="">
+    <div class="login-img" @click="clickToLogin">
+      <img v-if="this.isLogin" src="~assets/img/logo.png"alt="">
+      <img v-else src="~assets/img/index/default.png" alt="">
+    </div>
   </div>
 </template>
 
 <script>
+  import {getcookie} from "@/network/request";
 
   export default {
-    name: "RightHeader"
+    name: "RightHeader",
+    methods: {
+      clickToLogin(){
+        if(!this.isLogin){
+          this.$router.replace("/login");
+        }
+      }
+    },
+    computed: {
+      isLogin(){
+        return getcookie('user_id').length > 0;
+      }
+    }
   }
 </script>
 

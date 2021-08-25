@@ -5,6 +5,9 @@ const Home = ()=> import('../views/home/Home')
 const Ranking = ()=> import('../views/ranking/Ranking')
 const Category = ()=> import('../views/category/Category')
 const Class = () => import('../views/category/categoryChildren/Class')
+const Login = () => import('../views/login/Login')
+const Register = () => import('../views/register/Register')
+const Upload = () => import('../views/upload/Upload')
 // 1.安装插件
 Vue.use(VueRouter)
 
@@ -87,6 +90,18 @@ const routes = [
   {
     path: '/ranking',
     component: Ranking,
+  },
+  {
+    path: '/login',
+    component: Login,
+  },
+  {
+    path: '/register',
+    component: Register,
+  },
+  {
+    path: '/upload',
+    component: Upload
   }
 ]
 const router = new VueRouter({

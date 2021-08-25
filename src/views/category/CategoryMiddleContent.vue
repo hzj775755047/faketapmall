@@ -25,7 +25,7 @@
     },
     created() {
       getCategories().then(res =>{
-        this.categories = res;
+        this.categories = res.data;
       })
     }
   }

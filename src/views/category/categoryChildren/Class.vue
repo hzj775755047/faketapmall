@@ -1,6 +1,6 @@
 <template>
   <div id="class">
-    <categoryApplication v-for="(d,index) in data" :num="index" :data="d"></categoryApplication>
+    <categoryApplication v-for="(d,index, key) in data" :key="index" :num="index" :data="d"></categoryApplication>
   </div>
 </template>
 
@@ -21,13 +21,13 @@
     created() {
       this.class_id = this.$route.params.id;
       getCategoryDataById(this.class_id).then(res =>{
-        this.data = res;
+        this.data = res.data;
       })
     },
     watch: {
       '$route': function(to, from){
         getCategoryDataById(to.params.id).then(res =>{
-          this.data = res;
+          this.data = res.data;
         })
         document.body.scrollTop = 0;
       }

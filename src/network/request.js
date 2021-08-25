@@ -1,5 +1,24 @@
 import axios from 'axios'
 
+//请求拦截器
+axios.interceptors.request.use(config=>{
+//  如果token存在，请求携带这个token
+  if (getcookie('jwttoken')) {
+    config.headers['Authorization'] = getcookie('jwttoken');
+  }
+  return config;//整个遍历完没找到，就返回空值
+})
+
+export function getcookie(name) {
+  let arr = document.cookie.split('; ');//用“;”和空格来划分cookie
+  for(let i = 0 ;i < arr.length ; i++){
+    let arr2 = arr[i].split("=");
+    if(arr2[0] == name){
+      return arr2[1];
+    }
+  }
+  return '';
+}
 
 export function request(config){
   // 1.创建axios的实例
@@ -10,7 +29,7 @@ export function request(config){
   // 2.axios的拦截器
   // 2.2响应拦截
   instance.interceptors.response.use(res =>{
-    return res.data.data;
+    return res.data;
   }, err =>{
   })
   // 3.发送真正的网络请求

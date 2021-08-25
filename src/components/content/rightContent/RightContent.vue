@@ -24,7 +24,7 @@
     },
     created() {
       getHotList().then(res =>{
-        this.hotList = res;
+        this.hotList = res.data;
       })
     }
   }
