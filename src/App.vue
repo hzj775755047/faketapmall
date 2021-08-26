@@ -4,8 +4,6 @@
     <main-nav-bar/>
     <!-- 右边内容栏   -->
     <div id="middle-content">
-<!--      <input type="file" @change="getFile($event)">-->
-<!--      <button class="" @click="submit($event)">提交</button>-->
       <keep-alive>
         <router-view></router-view>
       </keep-alive>

@@ -1,5 +1,5 @@
 <template>
-  <div id="hot-application">
+  <div id="hot-application" @click="toDetail">
     <div class="hot-application-left">
       <img class="hot-application-img" :src="data.app_icon" alt="">
     </div>
@@ -25,6 +25,11 @@
     },
     props: {
       data: Object
+    },
+    methods: {
+      toDetail(){
+        this.$router.replace("/detail/"+this.data.app_id);
+      }
     }
   }
 </script>

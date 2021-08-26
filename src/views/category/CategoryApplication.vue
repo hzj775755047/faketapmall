@@ -1,5 +1,5 @@
 <template>
-  <div id="category-application">
+  <div id="category-application" @click="toDetail">
     <div class="rank-num">{{num+1}}</div>
     <div class="content">
       <div class="c-l-img">
@@ -28,7 +28,13 @@
     props: {
       data: Object,
       num: Number
+    },
+    methods: {
+      toDetail(){
+        this.$router.replace("/detail/"+this.data.app_id);
+      }
     }
+
   }
 </script>
 

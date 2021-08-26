@@ -35,6 +35,7 @@
 
 <style scoped>
   #right-header{
+    z-index: 2;
     padding: 12px 14px 25px 0;
     line-height: 24px;
     display: flex;

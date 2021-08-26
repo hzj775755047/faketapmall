@@ -1,7 +1,7 @@
 <template>
   <div id="rightContent">
     <right-header></right-header>
-    <div class="right-details-content">
+    <div ref="rightContent" class="right-details-content">
       <right-details name="热门应用" :list="this.hotList"></right-details>
     </div>
   </div>
@@ -19,27 +19,29 @@
     },
     data(){
       return {
-        hotList: null
+        hotList: null,
+        rightTop: 0,
       }
     },
     created() {
       getHotList().then(res =>{
         this.hotList = res.data;
       })
+    },
+    mounted() {
+
+    },
+    methods: {
+
     }
   }
 </script>
 
 <style scoped>
   #rightContent{
-    /*position: sticky;*/
-    /*top: 0;*/
-    /*height: 100%;*/
   }
   .right-details-content{
 
-    /*height: auto;*/
-    /*overflow: scroll;*/
   }
   .right-details-content::-webkit-scrollbar {
     display: none;

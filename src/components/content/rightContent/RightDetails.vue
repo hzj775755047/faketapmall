@@ -4,7 +4,7 @@
       <div class="right-detail-header-title">{{ this.name}}</div>
     </div>
     <div class="right-detail-content">
-      <hot-application v-for="l in list" :data="l"></hot-application>
+      <hot-application v-for="(l,index) in list" :key="index" :data="l"></hot-application>
     </div>
     <div class="right-detail-footer">
       <div class="right-detail-footer-title">查看全部</div>
@@ -22,6 +22,8 @@
     props:{
       name: String,
       list: Array
+    },
+    methods: {
     }
   }
 </script>

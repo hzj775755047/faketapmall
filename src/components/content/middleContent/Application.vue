@@ -1,5 +1,5 @@
 <template>
-  <div class="application">
+  <div class="application" @click="toDetail">
     <div class="app-i">
       <img class="application-img" :src="data.app_big_img" alt="">
     </div>
@@ -24,6 +24,11 @@
     name: "Application",
     props:{
       data: Object
+    },
+    methods: {
+      toDetail(){
+        this.$router.replace("/detail/"+this.data.app_id);
+      }
     }
   }
 </script>

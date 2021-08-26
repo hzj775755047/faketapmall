@@ -8,6 +8,7 @@ const Class = () => import('../views/category/categoryChildren/Class')
 const Login = () => import('../views/login/Login')
 const Register = () => import('../views/register/Register')
 const Upload = () => import('../views/upload/Upload')
+const Detail = () => import('../views/detail/Detail')
 // 1.安装插件
 Vue.use(VueRouter)
 
@@ -102,6 +103,13 @@ const routes = [
   {
     path: '/upload',
     component: Upload
+  },
+  {
+    path: '/detail/:iid',
+    component: Detail,
+    meta: {
+      keepAlive: false
+    }
   }
 ]
 const router = new VueRouter({
