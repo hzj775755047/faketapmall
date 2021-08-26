@@ -72,13 +72,11 @@
           document.cookie ="phone_no=" + res.data.phone_no;
           document.cookie ="isdeveloper=" + res.data.isdeveloper;
           document.cookie ="role_id=" + res.data.role_id;
-          // window.sessionStorage.setItem('tokenStr',tokenStr);
           this.$router.replace('/home');
         }
         if (code==400){
           alert(msg);
         }
-        // this.$router.replace('/login');
       }).catch(err =>{
         alert('其他错误')
       });

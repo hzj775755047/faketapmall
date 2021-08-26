@@ -4,9 +4,7 @@
     <main-nav-bar/>
     <!-- 右边内容栏   -->
     <div id="middle-content">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </div>
   </div>
 </template>
