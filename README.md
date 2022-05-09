@@ -7,6 +7,11 @@
 This project was a work of advanced software implementation in my junior year. My roommates and I made a website for application display by imitating Taptap website. This was the first time that I used Vue.js framework and other knowledge of web front-end to make front-end interface.  
 Because I was not familiar with git to manage the project at that time, there was a difference in the division of front-end work. I did not use any componenet library for my part, and all the front-end styles were written by CSS. Another front-end roommates used the Element-UI componenet library, because he was not familiar with front-end work, so he was not good at designing front-end styles. As a result, the front-end interface style he was responsible for was incompatible with that I was responsible for, and some components in the interface wre misaligned.   
 This branch of the git project had a version 1.0 project, and this is the final work we submitted. Since we were all new to technology at the time, many parts of the project were not perfectly designed and only a fraction of the technical aspects of the vue framework were used. Therefore, I decided to redesign the entire front-end interface in my spare time and improve the features that were not implemented in the project due to deadlines. Since the roomate @WangYueChengit who developed the back end no longer want to maintain and improve the back end of the project, I decided to implement the back end again by myself. He uses Springboot+SpringMVC+Mybatis, using Redis as data cache and Docker as container. Although I know a little bit about using Springboot for CRUD development, this time i am going to use Node.js as the back end of my project to test the results of my node.js learning.
+
+# main
+main 分支上项目主要是包含除了登录、上传文件、详情页、下载文件功能的项目。  
+Main branch projects mainly include in addition to login, upload files, details page, download file functions of the project.
+
 # 1.0 项目版本
 # Version 1.0 project introduction
 详情可进项目分支1.0查看。  
