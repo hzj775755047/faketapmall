@@ -1,8 +1,8 @@
 # 项目介绍
 # Introduction
-该项目前端使用vue.js框架和element-ui组件库完成，这是在1.0版本的基础上增添删改和完善了一些处理。后端使用node.js部署了一些简单的增删改查功能，以提供数据接口。我使用了nginx作为http服务器，目前部署在我的服务器上：http://8.134.217.191:8082。
+该项目前端使用vue.js框架和element-ui组件库完成，在1.0版本的基础上，我花了一个星期的时间一些页面进行增添删改和完善了一些处理。后端使用node.js部署了一些简单的增删改查功能，以提供数据接口。我使用了nginx作为http服务器，目前部署在我的服务器上：http://8.134.217.191:8082。
 
-This project is currently completed using vue.js framework and element-ui component library, which is added, modified and improved on the basis of version 1.0. Node.js is used to deploy some simple add, delete, update and select functions on the back end to provide a data interface. I use the nginx as http server, currently deployed on my server: http://8.134.217.191:8082.
+This project is currently completed using vue.js framework and element-ui component library,Based on version 1.0, I spent a week adding, deleting and improving some pages. Node.js is used to deploy some simple add, delete, update and select functions on the back end to provide a data interface. I use the nginx as http server, currently deployed on my server: http://8.134.217.191:8082.
 
 
 # 与1.0的比较
