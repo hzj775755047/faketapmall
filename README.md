@@ -16,3 +16,8 @@ Main branch projects mainly include in addition to login, upload files, details 
 # Version 1.0 project introduction
 详情可进项目分支1.0查看。  
 Details can be found in project branch 1.0.
+
+# 2.0 项目版本
+# version 2.0 project introduction
+详情可进项目分支2.0查看
+Details can be found in projrct branch 2.0
