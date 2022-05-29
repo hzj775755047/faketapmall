@@ -35,7 +35,7 @@
     components: {TabBarItem, TabBar, Icon},
     methods: {
       toHome(){
-        this.$router.replace('/home')
+        this.$router.push('/main/home');
       }
     }
   }
