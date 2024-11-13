@@ -1,7 +1,7 @@
 <template>
   <div id="top-header">
     <div class="left-header">
-      {{ this.$store.state.topHeader }}
+     <el-button type='text'> < </el-button> 详细信息  评论
     </div>
     <div class="right-header">
       <!-- 搜索框 -->
@@ -44,8 +44,9 @@ export default {
 
 <style scoped>
   #top-header{
-    position: sticky;
+    position: fixed;
     z-index: 1;
+    background: #fff;
     top: 0;
     display: flex;
     flex: 1;
@@ -56,7 +57,7 @@ export default {
     padding: 30px 30px 20px 30px;
     margin-left: 10px;
     width: 565px;
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
     box-sizing: border-box;
     top: 0;
     line-height: 26px;
@@ -67,11 +68,12 @@ export default {
   .right-header{
     padding: 12px 14px 25px;
     line-height: 24px;
+    margin-left: 20px;
     display: flex;
     align-items: center;
     width: auto;
     top: 0;
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
   }
   .search{
     width: 100%;
@@ -80,7 +82,7 @@ export default {
     display: flex;
     padding: 6px 13px;
     align-items: center;
-    background-color: var(--primary-white);
+    background-color: var(--color-background);
   }
   .search-icon{
     width: 24px;

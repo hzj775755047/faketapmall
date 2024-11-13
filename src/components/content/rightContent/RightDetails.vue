@@ -1,7 +1,7 @@
 <template>
   <div id="RightDetails">
     <div class="right-detail-header">
-      <div class="right-detail-header-title"> 热门应用 </div>
+      <div class="right-detail-header-title"> 相关游戏 </div>
     </div>
     <div class="right-detail-content">
       <hot-application v-for="item in hotList" :data="item"/>

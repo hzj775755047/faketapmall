@@ -1,4 +1,5 @@
 <template>
+  <div>
   <tab-bar id="main-tab-bar">
     <div @click="toHome" class="icon-i">
       <img src="~assets/img/taptap.png" alt="">
@@ -24,6 +25,15 @@
 <!--      <div slot="item-text">开发者</div>-->
 <!--    </tab-bar-item>-->
   </tab-bar>
+  <!-- <div class="tap-footer layout-header__footer">
+    <div class="tap-footer__link-group flex-center--y mt-12">開發者法律EULA隱私</div>
+    <div class="tap-footer__text mt-12">© 2024 TapTap</div>
+    <div>
+      <span class="tap-footer__share-title">關注一下囉。</span>
+      <div class="flex-center--y mt-12"></div>
+    </div>
+  </div> -->
+  </div>
 </template>
 
 <script>
@@ -43,7 +53,8 @@
 
 <style scoped>
   #main-tab-bar{
-    position: sticky;
+    position: fixed;
+    left:270px;
     top: 0;
     width: 250px;
     height: 100%;
@@ -57,5 +68,9 @@
   .icon-i img{
     width: 100%;
     height: 100%;
+  }
+  .layout-header__footer{
+    position: absolute;
+    bottom: 20px;
   }
 </style>

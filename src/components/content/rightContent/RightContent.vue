@@ -1,7 +1,7 @@
 <template>
   <div id="right-content" >
     <div class="right-details-content" :style="{'max-height': this.timeLineHeight + 'px'}">
-      <right-details name="热门应用" ></right-details>
+      <right-details name="相关游戏" ></right-details>
     </div>
   </div>
 </template>
@@ -29,8 +29,9 @@
 <style scoped>
   #right-content{
     width: 320px;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    right:300px;
+    top: 75px;
     height: 100%;
   }
   .right-details-content{

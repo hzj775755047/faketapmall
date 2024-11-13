@@ -56,25 +56,25 @@ router.beforeEach((to, from, next) =>{
   if(path.includes('/home')){
     store.commit({
       type: 'setTopHeader',
-      topHeader: '首页'
+      topHeader: ''
     });
     next();
   }else if(path.includes('/category')){
     store.commit({
       type: 'setTopHeader',
-      topHeader: '分类'
+      topHeader: ''
     });
     next();
   }else if(path.includes('ranking')){
     store.commit({
       type: 'setTopHeader',
-      topHeader: '排行榜'
+      topHeader: ''
     });
     next();
   }else if(path.includes('details')){
     store.commit({
       type: 'setTopHeader',
-      topHeader: '应用详情'
+      topHeader: ''
     });
     next();
   }else if(path.includes('login')){

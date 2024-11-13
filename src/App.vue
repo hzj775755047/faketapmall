@@ -17,6 +17,7 @@ export default {
 
 <style lang="less">
   @import "assets/css/base.css";
+  @import "assets/css/tap.css";
   #app{
     display: flex;
     justify-content: center;
