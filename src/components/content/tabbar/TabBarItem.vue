@@ -49,6 +49,15 @@ export default {
 </script>
 
 <style scoped>
+ @media only screen and (max-width: 600px) {
+   .tab-bar-item{
+    width:50px !important;
+    display: inline-block !important;
+  }
+       
+
+        
+  }
   .tab-bar-item{
     padding: 10px 20px 10px 10px;
     margin: 40px 50px 0 20px;

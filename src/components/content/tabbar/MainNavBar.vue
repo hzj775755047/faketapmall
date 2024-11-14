@@ -2,7 +2,7 @@
   <div>
   <tab-bar id="main-tab-bar">
     <div @click="toHome" class="icon-i">
-      <img src="~assets/img/taptap.png" alt="">
+      <img src="~assets/img/taptap.png" alt="" class="imgi">
     </div>
     <tab-bar-item path="/main/home" activeColor="#1296db">
       <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
@@ -52,6 +52,22 @@
 </script>
 
 <style scoped>
+ @media only screen and (max-width: 600px) {
+  #main-tab-bar{
+    left:0px !important;
+    height: 100px  !important ; 
+    width: 100%  !important;
+  }
+  .icon-i{
+    opacity:0 !important;
+  }
+  .imgi{
+    
+  }
+       
+
+        
+  }
   #main-tab-bar{
     position: fixed;
     left:270px;

@@ -25,6 +25,12 @@ export default {
 </script>
 
 <style scoped>
+  @media only screen and (max-width: 600px) {
+    .middle-content-main{
+      display: block !important;
+      width: 600px !important;
+    }
+  }
   #main{
     height: 100%;
     display: flex;

@@ -4,7 +4,8 @@
       <div class="right-detail-header-title"> 相关游戏 </div>
     </div>
     <div class="right-detail-content">
-      <hot-application v-for="item in hotList" :data="item"/>
+      <hot-application v-for="item in hotList" :data="item" :key='item'/>
+      <el-divider></el-divider>
     </div>
     <div class="right-detail-footer">
       <div class="right-detail-footer-title" @click="toRanking">查看全部</div>
@@ -59,7 +60,7 @@
     display: flex;
     align-items: center;
     border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
-    background-color: var(--primary-white);
+    /* background-color: var(--primary-white); */
   }
   .right-detail-header-title{
     color: var(--title-font-color);
@@ -72,7 +73,7 @@
     margin: 2px 0px;
     width: 100%;
     padding: 16px 0;
-    background-color: var(--primary-white);
+    /* background-color: var(--primary-white); */
   }
   .right-detail-footer{
     width: 100%;
@@ -81,7 +82,7 @@
     display: flex;
     align-items: center;
     border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
-    background-color: var(--primary-white);
+    /* background-color: var(--primary-white); */
   }
   .right-detail-footer-title{
     color: var(--footer-font-color);

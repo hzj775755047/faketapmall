@@ -3,7 +3,7 @@
     
     <!-- 顶部 -->
     <div class="details-top">
-       <el-carousel :interval="4000" type="card" height="500px">
+       <el-carousel :interval="4000" type="card" height="500px" class="detailLunbo">
             <el-carousel-item v-for="(item, index) in srcList" :key="index">
               <el-image fit="cover" :src="item" :preview-src-list="[item]"></el-image>
             </el-carousel-item>
@@ -69,6 +69,7 @@
 </template>
 
 <script>
+import RightContent from '../../components/content/rightContent/RightContent.vue';
 import {getApplicationbyId, getScreenShotbyId, getClassNamebyId} from "../../network/api";
 import {urlPre} from "../../network/request";
 import DetailsComment from "./DetailsComment";
@@ -77,6 +78,7 @@ export default {
   name: "DetailsContent",
   components: {DetailsComment},
   data(){
+    RightContent
     return {
       activeName: 'details',
       app: {},
@@ -145,9 +147,25 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 600px) {
+  #details-content{
+    border:none !important;
+  }
+  .detailLunbo{
+    display: none !important;
+  }
+  .details-top-img{
+    margin-top: 100px !important;
+  }
+}
+
   #details-content{
     margin-bottom: 50px;
     margin-top:80px;
+    padding-left: 5px;
+    padding-right: 15px;
+    border-left:1px solid var(--gray-80);
+    border-right:1px solid var(--gray-80);
   }
   .details-top{
     position: relative;
@@ -177,6 +195,7 @@ export default {
   .details-top-description{
     display: flex;
     position: absolute;
+    left: -5px;
     width: 600px;
     bottom: 0;
     padding: 8px 12px 8px 16px;

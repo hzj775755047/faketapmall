@@ -6,13 +6,14 @@
     <div class="hot-application-middle">
       <div class="hot-title">{{ data.app_name }}</div>
       <div class="hot-label">
-        <hot-application-label v-for="label in labels" :name="label"/>
+        <hot-application-label v-for="label in labels" :name="label" :key='label'/>
       </div>
     </div>
     <div class="hot-application-right">
       <img src="~assets/img/label/star.svg" alt="">
       <div class="score">{{ random(1, 10) }}</div>
     </div>
+    
   </div>
 </template>
 

@@ -1,9 +1,12 @@
 <template>
   <div id="top-header">
     <div class="left-header">
+      <div @click="toHome" v-if="this.$route.path=='/main/home'">
+        <img src="~assets/img/taptap.png" alt=""  class="topLogp">>
+      </div>
       <div  v-if="this.$route.path!='/main/home'">
-     <i class="el-icon-back details-back-btn" @click="back"></i> 详细信息  评论
-     </div>
+        <i class="el-icon-back details-back-btn" @click="back"></i> 详细信息
+      </div>
     </div>
     <div class="right-header">
       <!-- 搜索框 -->
@@ -29,6 +32,9 @@ export default {
     }
   },
   methods: {
+    toHome(){
+        this.$router.push('/main/home');
+      },
     back(){
       this.$router.go(-1);
     },
@@ -48,9 +54,37 @@ export default {
 </script>
 
 <style scoped>
+ @media only screen and (max-width: 600px) {
+  .topLogp{
+    display:block !important;
+    left: 45px !important ;
+    width: 125px !important;
+    position: fixed !important;
+    top: 8px !important;
+    z-index: 99 !important;
+  }
+  .left-header{
+    width: 400px !important;
+    z-index: 100 !important;
+  }
+  .right-header{
+    width:95px !important;
+    margin-left: 100px !important;
+    margin-top: 10px !important;
+  }
+  .search{
+    display: none !important;
+  }
+       
+
+        
+  }
+  .topLogp{
+    display:none;
+  }
   #top-header{
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     background: #fff;
     top: 0;
     display: flex;
