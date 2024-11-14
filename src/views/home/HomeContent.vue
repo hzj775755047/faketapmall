@@ -1,5 +1,12 @@
 <template>
   <div id="home-content">
+    <div style="margin-top:200px;width:1000px;margin-bottom:100px">
+    <el-carousel :interval="2000"  height="400px" direction="vertical" > 
+            <el-carousel-item v-for="(item, index) in appList" :key="index">
+              <el-image fit="cover" :src="urlPre+item.app_big_img"></el-image>
+            </el-carousel-item>
+          </el-carousel>
+          </div>
     <application v-for="myapp in this.appList" :application="myapp"/>
     <div v-if="loading" class="home-content-loading" @click="loadingMore">> 点击加载更多 <</div>
     <div v-if="noMore" class="home-content-nomore">没有更多了..</div>
@@ -9,13 +16,14 @@
 <script>
 import Application from "../../components/content/application/Application";
 import {qryAppList, qryAppListbyNum} from "../../network/api";
-
+import {urlPre} from "../../network/request";
 export default {
   name: "HomeContent",
   components: {Application},
   data(){
     return {
       appList: [],
+      urlPre: urlPre,
       gotDataLength: 0,
       loading: true,
       num1: 1,

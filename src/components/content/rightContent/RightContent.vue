@@ -1,5 +1,5 @@
 <template>
-  <div id="right-content" >
+  <div id="right-content" v-if="this.$route.path!='/main/home'">
     <div class="right-details-content" :style="{'max-height': this.timeLineHeight + 'px'}">
       <right-details name="相关游戏" ></right-details>
     </div>
@@ -13,6 +13,7 @@
     name: "RightContent",
     components: {RightDetails},
     mounted() {
+      console.log(this.$route.path)
       this.timeLineHeight = document.documentElement.clientHeight;
       window.onresize = () =>{
         this.timeLineHeight = document.documentElement.clientHeight;

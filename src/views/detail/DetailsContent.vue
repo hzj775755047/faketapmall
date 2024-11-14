@@ -1,11 +1,18 @@
 <template>
   <div id="details-content">
+    
     <!-- 顶部 -->
     <div class="details-top">
+       <el-carousel :interval="4000" type="card" height="500px">
+            <el-carousel-item v-for="(item, index) in srcList" :key="index">
+              <el-image fit="cover" :src="item" :preview-src-list="[item]"></el-image>
+            </el-carousel-item>
+          </el-carousel>
       <div class="details-top-img">
-        <img :src="urlPre + app.app_big_img" alt="">
+       
       </div>
-      <i class="el-icon-back details-back-btn" @click="back"></i>
+      
+     
       <div class="details-top-description">
         <div class="details-top-description-icon">
           <img :src="urlPre + app.app_icon" alt="">
@@ -18,6 +25,7 @@
     </div>
     <!-- 中间内容 -->
     <div class="details-middle-content">
+      
       <div class="details-main-content-label">{{ className }}</div>
       <div class="details-main-content-score">
         <img src="~assets/img/taptap.png" alt="">
@@ -39,11 +47,7 @@
       <el-tabs v-model="activeName" :stretch="true">
         <el-tab-pane label="详情" name="details">
           <!-- 轮播图 -->
-          <el-carousel :interval="4000" type="card" height="200px">
-            <el-carousel-item v-for="(item, index) in srcList" :key="index">
-              <el-image fit="cover" :src="item" :preview-src-list="[item]"></el-image>
-            </el-carousel-item>
-          </el-carousel>
+          
           <!-- 介绍信息 -->
           <div class="details-bottom-introduction">
             <section style="margin-bottom: 15px">
@@ -143,6 +147,7 @@ export default {
 <style scoped>
   #details-content{
     margin-bottom: 50px;
+    margin-top:80px;
   }
   .details-top{
     position: relative;
@@ -150,7 +155,7 @@ export default {
   .details-top-img{
     display: flex;
     justify-content: center;
-    height: 500px;
+    height: 100px;
     border-radius: 6px;
     background: var(--primary-white);
     overflow: hidden;

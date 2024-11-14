@@ -1,7 +1,9 @@
 <template>
   <div id="top-header">
     <div class="left-header">
-     <el-button type='text'> < </el-button> 详细信息  评论
+      <div  v-if="this.$route.path!='/main/home'">
+     <i class="el-icon-back details-back-btn" @click="back"></i> 详细信息  评论
+     </div>
     </div>
     <div class="right-header">
       <!-- 搜索框 -->
@@ -27,6 +29,9 @@ export default {
     }
   },
   methods: {
+    back(){
+      this.$router.go(-1);
+    },
     toLogin(){
       if(this.$route.path.indexOf('/login') !== -1) return;
       else if(this.$store.state.user_id !== ''){
