@@ -17,7 +17,7 @@
 
 <style scoped>
   #home{
-    width: 800px;
-    margin: 0 20px 0 20px;
+    width: 60%;
+    margin-left:30%;
   }
 </style>

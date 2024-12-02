@@ -13,12 +13,13 @@ import Register from "../views/register/Register";
 import Main from "../views/main/Main";
 import Search from "../views/search/Search";
 import Profile from "../views/profile/Profile";
-
+import web3 from "../views/home/web3";
 Vue.use(VueRouter)
 
 const routes = [
   {path: '/', redirect: '/main'},
   {path: '/login', component: Login},
+  {path: '/web3', component: web3},
   {path: '/register', component: Register},
   {path: '/profile', component: Profile},
   {

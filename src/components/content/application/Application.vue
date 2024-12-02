@@ -5,10 +5,7 @@
     </div>
     <div class="recommendation">
       <div class="recommendation-header">
-        <div class="hot-label">
-          <div class="label">高软 独家</div>
-          <hot-application-label v-for="label in labels" :name="label"/>
-        </div>
+        
         <div class="score">
           <img src="~assets/img/label/star.svg" alt="">
           <span class="score-number">{{random(1, 10)}}</span>
@@ -74,20 +71,21 @@
   .application{
     cursor: pointer;
     width: 100%;
-    margin: 0 20px 20px 20px;
+    margin: 0 10px 10px 10px;
     border-radius: var(--primary-border-radius);
     background-color: var(--application-bg-color);
     box-shadow: 0px 7px 10px 5px rgba(134,140,146,.3);
   }
   .application-img{
     width: 100%;
-    height: 100%;
+    height: 200px;
     border-radius: 10px 10px 0 0;
     border-bottom: 1px solid #dee2e3;
 
   }
   .recommendation{
     padding: 20px;
+    padding-top: 0;
   }
   .recommendation-header{
     text-align: center;
@@ -111,6 +109,7 @@
     display: flex;
     position: absolute;
     right: 1px;
+    top:8px;
     align-items: center;
     font-weight: var(--font-weight);
     font-size: var(--score-font-size);
